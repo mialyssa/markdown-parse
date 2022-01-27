@@ -1,4 +1,4 @@
-# Title
+# both links dont work
 
-a link!](https://something.com)
+a bad link](https://something.com)
 another link!](some-page.html)
