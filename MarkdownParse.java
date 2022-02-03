@@ -11,29 +11,31 @@ public class MarkdownParse {
         // the next )
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
-            System.out.println(currentIndex);
             int nextOpenBracket = markdown.indexOf("[", currentIndex);
             int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
             int openParen = markdown.indexOf("(", nextCloseBracket);
             int closeParen = markdown.indexOf(")", openParen);
-            
-            if(nextOpenBracket < 0 || nextCloseBracket < 0
-                || openParen < 0 || closeParen < 0)
-            {
+
+            if (nextOpenBracket < 0 || nextCloseBracket < 0 ||
+                openParen < 0 || closeParen < 0
+            ) {
                 break;
             }
 
-            if(markdown.charAt(nextOpenBracket - 1) == '!' ||
-                nextCloseBracket != openParen - 1)
-            {
+            
+            if (nextOpenBracket > 0 &&
+                markdown.charAt(nextOpenBracket - 1) == '!' ||
+                markdown.charAt(openParen - 1) != ']'
+            ) {
                 currentIndex = closeParen + 1;
                 continue;
             }
 
             toReturn.add(markdown.substring(openParen + 1, closeParen));
             currentIndex = closeParen + 1;
+            // System.out.println(currentIndex);
         }
-        System.out.println(currentIndex);
+
         return toReturn;
     }
     public static void main(String[] args) throws IOException {
@@ -43,5 +45,3 @@ public class MarkdownParse {
         System.out.println(links);
     }
 }
-
-//local change
