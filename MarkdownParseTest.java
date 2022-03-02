@@ -78,7 +78,12 @@ public class MarkdownParseTest {
         assertEquals(2, 1 + 1);
     }
 
-    //Lab 8 2/25/22
+    //Lab 8 2/23/22
+    @Test
+    public void testAddedWithVim() throws IOException {
+            assertEquals(5, 2+2+1);
+    }
+
     @Test
     public void testSnippet1() throws IOException {
         String contents = Files.readString(Path.of("./snippet1.md"));
