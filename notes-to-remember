@@ -1,0 +1,12 @@
+check for .class first, as .class implies .java exists
+Have to be on ieng6 account for this (not windows)
+
+cs15lwi22alz@ieng6.ucsd.edu
+
+cd markdown-parse
+git clone [repo link]
+
+pushing to github repo:
+    git add .
+    git commit -m "message"
+    git push
