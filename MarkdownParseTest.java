@@ -84,6 +84,7 @@ public class MarkdownParseTest {
             assertEquals(5, 2+2+1);
     }
 
+    /*
     @Test
     public void testSnippet1() throws IOException {
         String contents = Files.readString(Path.of("./snippet1.md"));
@@ -104,5 +105,7 @@ public class MarkdownParseTest {
         List<String> expect = List.of("https://ucsd-cse15l-w22.github.io/");
         assertEquals(expect, MarkdownParse.getLinks(contents));
     }
+    */
+
 
 }
